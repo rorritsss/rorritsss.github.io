@@ -8,11 +8,13 @@
 <meta property="og:title" content="Rodrigo Cárdenas Maldonado">
 <meta property="og:description" content="Comercio exterior y logística marítima en Punta Arenas, la puerta a la Antártica.">
 <meta property="og:image" content="https://rorritsss.github.io/fotos/muelle-prat.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --paper: #f6f3ec; --ink: #18222d; --soft: #5b6670; --rule: #ddd6c7; --accent: #c2572b; --navy: #142a40; --sea: #0b1824; }
+  :root { --paper: #f6f3ec; --ink: #18222d; --soft: #5b6670; --rule: #ddd6c7; --accent: #8a5f00; --gold: #f2c14e; --navy: #0b1f3a; --sea: #0a1830; }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'Public Sans', system-ui, sans-serif; }
@@ -22,24 +24,25 @@
 
   /* Portada */
   .hero { position: relative; min-height: 92svh; color: #fff; display: flex; flex-direction: column;
-          background: linear-gradient(90deg, rgba(11,24,36,.78) 0%, rgba(11,24,36,.35) 55%, rgba(11,24,36,0) 80%),
-                      linear-gradient(180deg, rgba(11,24,36,.5) 0%, rgba(11,24,36,0) 30%, rgba(11,24,36,.7) 100%),
+          background: linear-gradient(90deg, rgba(10,24,48,.78) 0%, rgba(10,24,48,.35) 55%, rgba(10,24,48,0) 80%),
+                      linear-gradient(180deg, rgba(10,24,48,.5) 0%, rgba(10,24,48,0) 30%, rgba(10,24,48,.7) 100%),
                       url(fotos/muelle-prat.jpg) center 62% / cover no-repeat var(--sea); }
   nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; font-size: 15px; }
-  nav .marca { font-weight: 700; letter-spacing: .3px; }
+  nav .marca { font-weight: 700; letter-spacing: .3px; display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  nav .marca img { width: 44px; height: 44px; }
   nav .menu a { color: #fff; text-decoration: none; margin-left: 22px; opacity: .85; }
   nav .menu a:hover { opacity: 1; text-decoration: underline; }
   @media (max-width: 640px) { nav .menu { display: none; } }
   .hero > .wrap { width: 100%; }
   .hero-body { margin-top: auto; padding-bottom: 64px; }
   .hero-body > * { max-width: 720px; }
-  .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 700; color: #f2c9a8; margin-bottom: 14px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
   .hero h1 { font-size: clamp(42px, 8vw, 76px); line-height: 1; margin: 0 0 20px; }
   .hero p { font-family: 'Newsreader', Georgia, serif; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.45; margin: 0 0 28px; color: #eef2f5; }
   .btns { display: flex; flex-wrap: wrap; gap: 12px; }
   .btn { display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 15px; }
-  .btn.solid { background: var(--accent); color: #fff; }
-  .btn.solid:hover { background: #a9461f; }
+  .btn.solid { background: var(--gold); color: var(--navy); }
+  .btn.solid:hover { background: #ffd36e; }
   .btn.line { border: 1.5px solid rgba(255,255,255,.8); color: #fff; }
   .btn.line:hover { background: rgba(255,255,255,.12); }
   .pie-foto { position: absolute; right: 24px; bottom: 18px; font-size: 12px; opacity: .7; }
@@ -49,7 +52,7 @@
   .datos .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
   .dato { padding: 26px 18px; border-left: 1px solid rgba(255,255,255,.12); }
   .dato:first-child { border-left: 0; padding-left: 0; }
-  .dato b { display: block; font-family: 'Newsreader', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f2c9a8; }
+  .dato b { display: block; font-family: 'Newsreader', Georgia, serif; font-size: 30px; line-height: 1.1; color: var(--gold); }
   .dato span { font-size: 14px; opacity: .85; }
   @media (max-width: 760px) { .datos .wrap { grid-template-columns: 1fr 1fr; } .dato { border-left: 0; padding-left: 0; } }
 
@@ -89,6 +92,9 @@
 
   footer { margin-top: 110px; background: var(--sea); color: #c9d3dc; padding: 56px 0 40px; }
   footer h2 { color: #fff; margin-bottom: 10px; }
+  footer .firma { display: flex; align-items: center; gap: 14px; margin-top: 40px; }
+  footer .firma img { width: 56px; height: 56px; }
+  footer .firma span { font-size: 12px; letter-spacing: 2px; color: var(--gold); }
   footer p { margin: 0 0 22px; max-width: 560px; }
   footer .chico { margin-top: 40px; font-size: 13px; opacity: .7; }
 </style>
@@ -98,7 +104,7 @@
 <header class="hero">
   <div class="wrap">
     <nav>
-      <span class="marca">Rodrigo Cárdenas</span>
+      <a class="marca" href="#"><img src="logo-rc.png" alt="Logo RC Comex Tech">Rodrigo Cárdenas</a>
       <span class="menu"><a href="#perfil">Perfil</a><a href="#certificados">Certificados</a><a href="#herramientas">Herramientas</a><a href="#contacto">Contacto</a></span>
     </nav>
   </div>
@@ -216,6 +222,7 @@
       <a class="btn line" href="cv-rodrigo-cardenas.pdf">Descargar CV</a>
       <a class="btn line" href="https://github.com/rorritsss">GitHub</a>
     </div>
+    <div class="firma"><img src="logo-rc.png" alt=""><span>COMEX · TECH · ADVISOR</span></div>
     <div class="chico">Punta Arenas, Chile · Español nativo · inglés C1 ·
       <span lang="en">Foreign trade and maritime logistics at the gateway to Antarctica.</span></div>
   </div>

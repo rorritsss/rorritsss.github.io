@@ -3,131 +3,122 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rodrigo Cárdenas Maldonado · Comercio Exterior y Logística Marítima</title>
-<meta name="description" content="Técnico en Comercio Exterior en Punta Arenas, Chile. Documentación aduanera, logística naviera y portuaria, inglés C1 certificado y automatización de procesos.">
+<title>Rodrigo Cárdenas Maldonado</title>
+<meta name="description" content="Comercio exterior y logística marítima en Punta Arenas. Documentación, terreno en puerto y herramientas propias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root { --bg: #f6f8fa; --card: #fff; --ink: #1c2530; --soft: #526270; --brand: #1a4d7a; --brand-2: #12324d; --line: #dbe3ea; --tag: #eaf1f7; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #0f1720; --card: #16212d; --ink: #e6edf3; --soft: #9fb0c0; --brand: #6aa8dd; --brand-2: #cfe3f5; --line: #253445; --tag: #1d3045; }
-  }
+  :root { --paper: #f6f3ec; --ink: #1d2733; --soft: #5d6873; --rule: #d9d2c3; --accent: #b4532a; --navy: #1f3a56; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, 'Segoe UI', Arial, sans-serif; }
-  main { max-width: 900px; margin: 0 auto; padding: 32px 16px 64px; }
-  header { padding: 28px 0 8px; border-bottom: 3px solid var(--brand); margin-bottom: 24px; }
-  h1 { margin: 0; font-size: clamp(28px, 5vw, 40px); color: var(--brand-2); }
-  .rol { font-size: 18px; color: var(--brand); font-weight: 600; margin-top: 4px; }
-  .meta { color: var(--soft); margin-top: 8px; }
-  .acciones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  .btn { display: inline-block; padding: 9px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid var(--brand); color: var(--brand); }
-  .btn.primario { background: var(--brand); color: #fff; }
-  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .8px; color: var(--brand); margin: 36px 0 12px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
-  .card h3 { margin: 0 0 4px; font-size: 17px; color: var(--brand-2); }
-  .card .sub { color: var(--soft); font-size: 14px; margin-bottom: 8px; }
-  .card p { margin: 6px 0; }
-  .card a { color: var(--brand); font-weight: 600; }
-  ul { margin: 6px 0 0; padding-left: 20px; }
-  li { margin-bottom: 4px; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { background: var(--tag); color: var(--brand); border-radius: 4px; padding: 3px 9px; font-size: 14px; }
-  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
-  th { color: var(--soft); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
-  a { color: var(--brand); }
-  .verif, td:nth-child(3) { white-space: nowrap; }
-  footer { margin-top: 48px; color: var(--soft); font-size: 14px; }
-  @media (max-width: 600px) { th:nth-child(3), td:nth-child(3) { display: none; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'Public Sans', system-ui, sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 600; color: var(--navy); }
+  h1 { font-size: clamp(36px, 7vw, 54px); line-height: 1.05; margin: 0 0 18px; }
+  .intro { font-family: 'Newsreader', Georgia, serif; font-size: 22px; line-height: 1.5; margin: 0 0 22px; }
+  .links { font-size: 15px; }
+  .links a { margin-right: 18px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--navy); }
+  h2 { font-size: 28px; margin: 64px 0 6px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .bajada { color: var(--soft); margin: 0 0 22px; }
+  p { margin: 0 0 14px; }
+
+  .certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 28px 22px; }
+  .cert { margin: 0; }
+  .cert a.img { display: block; aspect-ratio: 4 / 3; background: #fff; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+                box-shadow: 0 1px 0 var(--rule), 0 8px 18px -12px rgba(29, 39, 51, .35); transition: transform .15s; }
+  .cert a.img:hover { transform: translateY(-3px); }
+  .cert img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .cert .vacio { display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px; height: 100%;
+                 font-family: 'Newsreader', Georgia, serif; font-size: 19px; color: var(--navy); background: #fbf9f4; }
+  .cert figcaption { margin-top: 10px; font-size: 15px; line-height: 1.45; }
+  .cert figcaption b { display: block; color: var(--navy); }
+  .cert figcaption span { color: var(--soft); }
+
+  .proyecto { display: grid; grid-template-columns: 150px 1fr; gap: 6px 22px; padding: 16px 0; border-bottom: 1px dashed var(--rule); }
+  .proyecto:last-child { border-bottom: 0; }
+  .proyecto .tipo { color: var(--soft); font-size: 14px; padding-top: 4px; }
+  .proyecto h3 { margin: 0 0 4px; font-size: 21px; }
+  @media (max-width: 560px) { .proyecto { grid-template-columns: 1fr; } }
+
+  footer { margin-top: 72px; font-size: 14px; color: var(--soft); }
 </style>
 </head>
 <body>
-<main>
+<div class="wrap">
 
 <header>
   <h1>Rodrigo Cárdenas Maldonado</h1>
-  <div class="rol">Comercio Exterior · Logística naviera y portuaria</div>
-  <div class="meta">Punta Arenas, Chile · Español nativo · Inglés C1 certificado</div>
-  <div class="acciones">
-    <a class="btn primario" href="cv-rodrigo-cardenas.pdf">Descargar CV</a>
-    <a class="btn" href="mailto:rodrigocardenasmaldonado@gmail.com">rodrigocardenasmaldonado@gmail.com</a>
-    <a class="btn" href="https://github.com/rorritsss">GitHub</a>
+  <p class="intro">Trabajo en comercio exterior en Punta Arenas, la puerta a la Antártica. Reviso documentos, subo a los buques
+     y armo mis propias herramientas para que los errores no lleguen a la Aduana.</p>
+  <div class="links">
+    <a href="cv-rodrigo-cardenas.pdf">CV en PDF</a>
+    <a href="mailto:rodrigocardenasmaldonado@gmail.com">Correo</a>
+    <a href="https://github.com/rorritsss">GitHub</a>
   </div>
 </header>
 
-<section>
-  <h2>Perfil</h2>
-  <p>Técnico en Comercio Exterior (INACAP) con experiencia en agencia de naves en Punta Arenas, puerta de entrada a la Antártica.
-     Analizo y valido documentación (BL, DTI, DUS, AWB, manifiesto), trabajo en terreno en puerto y a bordo de buques, y resuelvo
-     problemas operativos en el momento. Además construyo herramientas propias para automatizar el trabajo documental.</p>
-</section>
+<h2>Lo que hago</h2>
+<p>Estoy en el departamento de carga internacional de Fast Cargo (Shackleton's Way). Mi día va entre papeles y terreno:
+   cruzo BL, AWB, DTI, DUS y manifiestos para que cuadren entre sí, y bajo al puerto o subo a bordo cuando hay carga
+   o descarga y algo no calza.</p>
+<p>Gran parte de la carga es para expediciones, turismo polar y bases antárticas, así que coordino a diario con clientes,
+   navieras y agencias de aduana, en español y en inglés.</p>
+<p>Estudio Técnico en Comercio Exterior en INACAP (estoy egresando) y en 2027 sigo con Ingeniería en Negocios Internacionales.</p>
 
-<section>
-  <h2>Experiencia</h2>
-  <div class="card">
-    <h3>Fast Cargo — a Shackleton's Way Company</h3>
-    <div class="sub">Práctica profesional · Departamento de carga internacional · Punta Arenas · 2026 – actualidad</div>
-    <ul>
-      <li>Validación cruzada de documentación de comercio exterior para carga aérea y marítima.</li>
-      <li>Trabajo en terreno en puerto y a bordo de buques: carga y descarga, contenedores, contingencias.</li>
-      <li>Seguimiento de operaciones para turismo polar, expediciones científicas y bases antárticas, en español e inglés.</li>
-      <li>Comparación de tarifas de agencias de aduana y mantención de planillas maestras de contenedores y liquidaciones.</li>
-    </ul>
-  </div>
-</section>
+<h2>Certificados</h2>
+<p class="bajada">Haz clic en cada uno para verlo completo o verificarlo.</p>
+<div class="certs">
+  <figure class="cert">
+    <a class="img" href="https://cert.efset.org/unT6Ei"><img src="certificados/efset-c1.jpg" alt="Certificado EF SET, inglés C1 Advanced, 66 de 100" loading="lazy"></a>
+    <figcaption><b>Inglés C1 Advanced · 66/100</b><span>EF SET · septiembre 2026 · <a href="https://cert.efset.org/unT6Ei">verificar</a></span></figcaption>
+  </figure>
+  <figure class="cert">
+    <a class="img" href="https://academy.claude.com/verify/651cf4f31e9aaaf8d850dd6fefc21049"><img src="certificados/claude-code-101.jpg" alt="Insignia Claude Code 101 de Claude Academy" loading="lazy"></a>
+    <figcaption><b>Claude Code 101</b><span>Claude Academy (Anthropic) · octubre 2026 · <a href="https://academy.claude.com/verify/651cf4f31e9aaaf8d850dd6fefc21049">verificar</a></span></figcaption>
+  </figure>
+  <figure class="cert">
+    <a class="img"><div class="vacio">Diplomado en Automatización de Procesos de Negocio</div></a>
+    <figcaption><b>Diplomado en Automatización (RPA) · 180 h</b><span>Universidad Andrés Bello · 2026</span></figcaption>
+  </figure>
+  <figure class="cert">
+    <a class="img" href="certificados/ist-incendios.jpg"><img src="certificados/ist-incendios.jpg" alt="Certificado IST Educa, prevención de incendios y uso de extintores" loading="lazy"></a>
+    <figcaption><b>Prevención de incendios y extintores</b><span>IST Educa · septiembre 2026 · nota 100 %</span></figcaption>
+  </figure>
+  <figure class="cert">
+    <a class="img" href="certificados/ist-carga.jpg"><img src="certificados/ist-carga.jpg" alt="Certificado IST Educa, manipulación manual de carga" loading="lazy"></a>
+    <figcaption><b>Manipulación manual de carga</b><span>IST Educa · septiembre 2026 · nota 90 %</span></figcaption>
+  </figure>
+  <figure class="cert">
+    <a class="img" href="certificados/ist-autocuidado.jpg"><img src="certificados/ist-autocuidado.jpg" alt="Certificado IST Educa, autocuidado para trabajadores" loading="lazy"></a>
+    <figcaption><b>Autocuidado para trabajadores</b><span>IST Educa · septiembre 2026 · nota 92 %</span></figcaption>
+  </figure>
+</div>
 
-<section>
-  <h2>Proyectos</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Radar de operaciones COMEX</h3>
-      <div class="sub">Automatización con IA · uso interno</div>
-      <p>Cruza correos y documentos de cada operación, detecta inconsistencias antes de que lleguen a Aduana y prioriza el seguimiento.
-         Incluye OCR de documentos escaneados, seguimiento de contenedores y un visor que muestra el documento junto al error detectado.</p>
-    </div>
-    <div class="card">
-      <h3>Simulador de grúa horquilla</h3>
-      <div class="sub">3D en el navegador · volante y pedales</div>
-      <p>Simulador para practicar la licencia clase D: dirección trasera, enganche de pallets, rack de 2 niveles y circuito de conos con penalizaciones.</p>
-      <p><a href="https://rorritsss.github.io/simulador-horquilla/">Probar el simulador →</a></p>
-    </div>
-    <div class="card">
-      <h3>Postulador de CV con análisis ATS</h3>
-      <div class="sub">Automatización personal</div>
-      <p>Busca ofertas del rubro, extrae las palabras clave de cada aviso y ajusta el CV y la carta sin inventar experiencia.</p>
-    </div>
-  </div>
-</section>
+<h2>Herramientas que he construido</h2>
+<p class="bajada">Las hago con Claude Code para resolver problemas reales de la pega.</p>
+<div class="proyecto">
+  <div class="tipo">Uso interno</div>
+  <div><h3>Radar de operaciones</h3>
+    <p>Lee los correos y documentos de cada operación, los cruza y avisa cuando algo no cuadra antes de que llegue a la Aduana.
+       Lee también documentos escaneados y sigue contenedores con las navieras.</p></div>
+</div>
+<div class="proyecto">
+  <div class="tipo">Público · <a href="https://rorritsss.github.io/simulador-horquilla/">probar</a></div>
+  <div><h3>Simulador de grúa horquilla</h3>
+    <p>Para practicar la licencia clase D con volante y pedales: dirección trasera, pallets, rack y circuito de conos.</p></div>
+</div>
+<div class="proyecto">
+  <div class="tipo">Personal</div>
+  <div><h3>Postulador de CV</h3>
+    <p>Lee una oferta, saca las palabras clave que filtran los sistemas de selección y ajusta mi CV sin inventar nada.</p></div>
+</div>
 
-<section>
-  <h2>Certificaciones</h2>
-  <table>
-    <tr><th>Certificación</th><th>Emisor</th><th>Fecha</th><th>Verificación</th></tr>
-    <tr><td><b>Inglés C1 Advanced</b> (66/100)</td><td>EF SET</td><td>Sep 2026</td><td class="verif"><a href="https://cert.efset.org/unT6Ei">Verificar →</a></td></tr>
-    <tr><td>Diplomado en RPA en Procesos de Negocio (180 h)</td><td>Universidad Andrés Bello</td><td>2026</td><td>—</td></tr>
-    <tr><td>Inglés Comunicativo B2 Upper Intermediate (24 h, nota 89 %)</td><td>Instituto Competent</td><td>Sep 2026</td><td>—</td></tr>
-    <tr><td>Prevención de incendios y uso de extintores (100 %)</td><td>IST Educa</td><td>Sep 2026</td><td>—</td></tr>
-    <tr><td>Manipulación manual de carga (90 %)</td><td>IST Educa</td><td>Sep 2026</td><td>—</td></tr>
-    <tr><td>Autocuidado para trabajadores (92 %)</td><td>IST Educa</td><td>Sep 2026</td><td>—</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2>Habilidades</h2>
-  <div class="tags">
-    <span class="tag">BL · DTI · DUS · AWB · Manifiesto</span><span class="tag">Operaciones portuarias</span><span class="tag">Agenciamiento de naves</span>
-    <span class="tag">Excel avanzado</span><span class="tag">Análisis de datos</span><span class="tag">Automatización / RPA</span>
-    <span class="tag">IA aplicada a procesos</span><span class="tag">Inglés C1</span><span class="tag">Licencia clase B</span>
-  </div>
-</section>
-
-<section>
-  <h2>In English</h2>
-  <p>Foreign trade technician based in Punta Arenas, Chile — the gateway to Antarctica. Hands-on experience at a ship agency:
-     document control (B/L, AWB, customs declarations), port and on-board operations, and logistics for polar expeditions.
-     C1 English (EF SET certified). I build my own automation tools to catch document errors before they reach customs.</p>
-</section>
-
-<footer>Última actualización: octubre 2026</footer>
-</main>
+<footer>
+  Punta Arenas, Chile · Español nativo · inglés C1 ·
+  <span lang="en">Foreign trade and maritime logistics, based at the gateway to Antarctica.</span>
+</footer>
+</div>
 </body>
 </html>
